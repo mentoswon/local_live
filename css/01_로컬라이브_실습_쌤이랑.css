@@ -1,0 +1,251 @@
+@charset "utf-8";
+/* 폰트 연결 */ /* cdn앞에 https:꼭 해주기 안하면 홈페이지 로딩 오래걸림*/
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+/* 초기값 */
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: 'NanumBarunGothic';
+    font-weight: 400;
+    color: #333;
+    line-height: 1;/* 글자가 가지고 있는 위아래 간격 최소화 */
+}
+
+/* 👉⭐header */
+header {
+/*     background-color: antiquewhite; */
+    height: 120px;
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* line-height: 120px; */ /* 이미지태그는 수직 가운데 정렬 안 됨 */
+}
+header h1 {
+    margin-top: 32px;
+}
+header nav ul li{
+    display: inline-block;
+    line-height: 120px;
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+header .user li {
+    display: inline-block;
+    line-height: 120px;
+    margin-left: 35px;
+}
+header .user li:first-child {
+    margin: 0;
+}
+
+/* 👉⭐.main_visual */
+.main_visual {
+    height: 640px;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 👉⭐.cont01 */
+.cont01 {
+    margin: 120px 0;
+}
+.cont01 .title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.cont01 .title h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.cont01 .title p {
+    color: #797979;
+}
+
+.cont01 .list {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list .item {
+    width: 342px; /* 가로값 넣으면 글자는 밑으로 내려가고 아이템끼리 간격이 동일해짐 */
+}
+.cont01 .list .item figure {
+    width: 100%;
+    height: 420px;
+    position: relative;
+    border-radius: 10px ;
+    overflow: hidden;
+    
+}
+.cont01 .list .item figure span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 30px;
+    background-color: #068e81;
+    color: #fff;
+    border-radius: 10px 0;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.cont01 .list .item div ul li {
+    display: inline-block;
+    border: 1px solid #797979;
+    height: 30px;
+    padding: 0 15px;
+    line-height: 30px;
+    border-radius: 15px;
+    color: #797979;
+    font-size: 14px;
+    margin: 25px 10px 20px 0  ;
+}
+.cont01 .list .item div h4 {
+    font-size: 20px;
+    line-height: 26px;
+    word-break: keep-all;
+    margin-bottom: 35px;
+    height: 52px;
+}
+.cont01 .list .item div strong {
+    font-size: 22px;
+}
+.cont01 .list .item div strong span {
+    font-size: 16px;
+    color: #797979;
+    text-decoration: line-through;
+    margin-left: 20px;
+    font-weight: 400;/* strong 때문에 굵게 되어있어서 레귤러 사이즈로 변경 */
+}
+
+/* 👉⭐.cont02 */
+.cont02 {
+    background-color: #f0f0f0;
+    padding: 120px 0;
+
+}
+.cont02 .inner {
+    margin: 0 auto;
+    width: 1440px;
+}
+.cont02 .inner .title {
+    margin-bottom: 40px;
+}
+
+.cont02 .inner .title h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.cont02 .inner .title p {
+    color: #797979;
+}
+
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .list .item {
+    width: 464px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.cont02 .inner .list .item div {
+    background-color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+.cont02 .inner .list .item img {
+    display: block;
+    width: 100%;
+    height: 337px;
+}
+.cont02 .inner .list .item div h4 {
+    font-size: 20px;
+}
+.cont02 .inner .list .item div p {
+    margin: 28px 0 10px;
+    color: #797979;
+    text-decoration: line-through;
+}
+.cont02 .inner .list .item div strong {
+    font-size: 22px;
+}
+.cont02 .inner .list .item div strong span {
+    color: red;
+    margin-left: 10px;
+}
+
+
+/* 👉⭐.footer */
+
+footer {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+footer p:nth-of-type(1) {
+    margin: 25px 0 10px ;
+}
+
+footer ul li {
+    display: inline-block
+}
+
+footer ul li:last-child {
+    color: red;
+    font-weight: 700;
+}
+
+footer ul li span {
+    margin: 0 5px;
+}
+
+footer p:nth-of-type(2) {
+    font-size: 14px;
+    margin-top: 50px
+}
